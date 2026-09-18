@@ -1,9 +1,9 @@
-# OAK Zimbabwe Partner Gathering — Registration & Attendance Platform
+# OAK  Foundation Partner Gathering 
 
-Live event platform for the **OAK Zimbabwe Foundation Partner Gathering**
+Live event platform for the **OAK Foundation Partner Gathering**
 (Cresta Lodge, Harare — 9–11 November 2026, ~110 attendees).
 
-Handles: attendee registration with QR entry passes, camera-based daily
+Handles: Attendee registration with QR entry passes, camera-based daily
 check-in with live headcount, the event programme, and the partner
 directory.
 
@@ -21,7 +21,7 @@ directory.
 
 ## Prerequisites
 
-- Node.js 18+
+- Node.js 
 - Docker Desktop (required to run Supabase locally)
 - npm
 
@@ -234,27 +234,6 @@ their name/email/etc.) — e.g. `102d591af1f043d1a06951cf54cbb6d0`. The
 scanner reads this token and the backend looks up the attendee
 server-side; no personal data is ever embedded in the printed/displayed
 code itself.
-
----
-
-## Known Limitations / Follow-Ups
-
-- **Partner logos**: not yet wired to Supabase Storage; the directory
-  currently shows initials placeholders instead of real logos.
-- **Documentation posts/photos**: not yet built (lowest priority per
-  the original brief's scope).
-- **QR download button**: registration success screen doesn't yet let
-  attendees download their QR as an image file.
-- **Day 2 / Day 3 programme**: seeded as placeholders — real content
-  pending from the coordination team.
-- **Mobile responsiveness**: needs a dedicated pass; sidebar navigation
-  currently collapses below the `md` breakpoint without a mobile menu
-  replacement.
-- Local dev's Supabase **Storage container** has occasionally been slow
-  to report healthy on `db reset` — this hasn't blocked any current
-  functionality (nothing yet depends on Storage) but is worth knowing
-  about if adding logo/photo uploads.
-
 ---
 
 ## Deployment (Production)
@@ -269,4 +248,4 @@ npx supabase db push
 
 Then deploy the Next.js app to Vercel, with the production Supabase URL
 and Publishable key set as environment variables in the Vercel project
-settings (never commit these)."# OAK-foundation" 
+settings ."# OAK-foundation" 
