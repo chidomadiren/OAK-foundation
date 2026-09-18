@@ -75,21 +75,6 @@ Visit `http://localhost:3000`.
 
 ---
 
-## Test Admin Login
-
-A test admin is created automatically by `supabase/seed.sql` every time you
-run `db reset` — this is why the admin account never disappears when you
-rebuild the database, unlike anything you create by hand in Studio.
-
-Email: admin@oak-test.local
-Password: OakAdmin123!
-
-
-**This is local-dev-only.** Real coordination-team admin accounts must be
-created separately for the production Supabase project — never reuse this
-password anywhere real.
-
----
 
 ## Project Structure
 
