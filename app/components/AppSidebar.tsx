@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { UserPlus, Calendar, Globe } from "lucide-react";
+import { UserPlus, QrCode, Calendar, FileText, Globe } from "lucide-react";
 
 const ALL_LINKS = [
   { icon: UserPlus, label: "Register", href: "/register", exact: true, alwaysShow: true },
-  { icon: Calendar, label: "Programme", href: "/programme", exact: true, alwaysShow: false },
-  { icon: Globe, label: "Partners", href: "/partners", exact: false, alwaysShow: false },
+  { icon: QrCode, label: "Check In", href: "/check-in", exact: true, alwaysShow: true },
+  { icon: Calendar, label: "Programme", href: "/programme", exact: true, alwaysShow: true },
+  { icon: FileText, label: "Attendance", href: "/attendance", exact: true, alwaysShow: true },
+  { icon: Globe, label: "Partners", href: "/partners", exact: false, alwaysShow: true },
 ];
-
 export default function AppSidebar() {
   const pathname = usePathname();
   const [hasRegistered, setHasRegistered] = useState(false);
@@ -20,10 +21,9 @@ export default function AppSidebar() {
     setHasRegistered(localStorage.getItem("oak_registered") === "true");
   }, [pathname]);
 
-  const visibleLinks = ALL_LINKS.filter(
-    (link) => link.alwaysShow || hasRegistered
-  );
-
+const visibleLinks = ALL_LINKS.filter(
+  (link) => link.alwaysShow || hasRegistered
+);
   return (
     <>
       <header className="md:hidden w-full h-[82px] bg-[#162E55] flex flex-row items-center px-[16px] gap-[12px] shrink-0 z-30">

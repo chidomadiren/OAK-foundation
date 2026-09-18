@@ -87,7 +87,7 @@ export default function CheckInPage() {
         await scannerRef.current.stop();
         scannerRef.current.clear();
       } catch {
-        // Suppress teardown race conditions
+       
       }
     }
 
@@ -108,7 +108,7 @@ export default function CheckInPage() {
     }
   }
 
-  // Camera initialization effect
+
   useEffect(() => {
     if (result) return; // Do not boot camera if a result card is displayed
 
